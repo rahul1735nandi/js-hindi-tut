@@ -54,7 +54,9 @@ console.log(typeof strinNumber);
 
 
 // console.log(+true);
+// console.log(+false);
 // console.log(+"");
+// console.log(+"rahul");
 
 // let num1, num2, num3
 
