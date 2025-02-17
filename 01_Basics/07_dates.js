@@ -37,12 +37,32 @@ let timeStamp = Date.now();
 // console.log(Math.floor(Date.now()/1000)); // converting miliseconds to seconds
 
 let d2 = new Date();
-console.log(d2.getDay()); // return day sunday is 1, monday is 2 and so on
-console.log(d2.getMonth() + 1); // montth s start with 0 so we are addin +1.
-console.log(d2.getFullYear());
+// console.log(d2.getDay()); // return day sunday is 1, monday is 2 and so on
+// console.log(d2.getMonth() + 1); // montth s start with 0 so we are addin +1.
+// console.log(d2.getFullYear());
 
 let d3 = d2.toLocaleString('default', {
     weekday: "narrow",  
 });
 
-console.log(d3);
+// console.log(d3);
+
+// let customDate = new Date();
+// console.log(customDate);
+// // let formatedDate1 = customDate.toISOString().split("T")[0];
+// let formatedDate1 = customDate.toISOString();
+// console.log(formatedDate1);
+// let a1 = customDate.toISOString().split("T");
+// console.log(a1);
+// let a2 = customDate.toISOString().split("T")[0];
+// console.log(a2);
+
+let res = "205-02-17";
+let convDate = new Date(res);
+let formated = convDate.toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric"
+});
+
+console.log(formated);
