@@ -35,12 +35,17 @@ const arr = new Array(4).fill(3, 2, );
 //     name: "Rahul"
 // })); // interesting
 
-console.log(Array.from([1,2,3], (x) => x + x));
+// console.log(Array.from([1,2,3], (x) => x + x));
 
 
 // Array.of method
 
-let score1 = 100;
-let score2 = 200;
-let score3 = 300;
+// let score1 = 100;
+// let score2 = 200;
+// let score3 = 300;
 // console.log(Array.of(score1, score2, score3));
+
+let score1 = [100, 125, 150];
+let score2 = [200, 225, 250];
+let score3 = [300, 325, 350];
+console.log(Array.of(score1, score2, score3));
