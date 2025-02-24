@@ -1,39 +1,42 @@
-// let score = "33aa";
+// let score = "33"; // ==> 33
+// let score = "33aa";  // ==> NaN
 // let score = null;
 // let score = undefined;
-// let score = true;
+// let score = true;  // 1
+// let score = false;  // 0
 // let score = "Rahul";
 // let score = "";
 
-/*
-console.log(typeof score);
 
-let valueInNumber = Number(score);
-console.log(valueInNumber);
-console.log(typeof valueInNumber);
-*/
+// console.log(typeof score);
+
+// let valueInNumber = Number(score);
+// console.log(valueInNumber);
+// console.log(typeof valueInNumber);
 
 // let isLoggedIn = 1;
+// let isLoggedIn = 0;
 // let isLoggedIn = "";
-/*
-let isLoggedIn = "Rahul";
-let isBooleanValue = Boolean(isLoggedIn);
 
-console.log(isBooleanValue);
-console.log(typeof isBooleanValue);
-*/
+// let isLoggedIn = "Rahul";
+// let isBooleanValue = Boolean(isLoggedIn);
+
+// console.log(isBooleanValue);
+// console.log(typeof isBooleanValue);
+
 
 //  1 =>  true; 0 => false
 // "" => false; "rahul" => true
 
-/*
-let someNumber = 33;
 
-let strinNumber = String(33);
+// let someNumber = 33;
 
-console.log(strinNumber);
-console.log(typeof strinNumber);
-*/
+// let strinNumber = String(33);
+
+// console.log(someNumber);
+// console.log(typeof someNumber);
+// console.log(strinNumber);
+// console.log(typeof strinNumber);
 
 // ************************ Operations *****************************
 
@@ -65,15 +68,15 @@ console.log(typeof strinNumber);
 let gameCounter = 100;
 // gameCounter++;
 ++gameCounter;
-console.log(gameCounter);
+// console.log(gameCounter);
 
 
 let x = 3;
 const y = x++;
 
-console.log(`x:${x}, y: ${y}`);
+// console.log(`x:${x}, y: ${y}`);
 
 let a = 3;
 const b = ++a;
 
-console.log(`a:${a}, y: ${b}`);
+// console.log(`a:${a}, y: ${b}`);
