@@ -4,8 +4,11 @@
 // console.log( 2 == 1);
 // console.log( 2 != 1);
 
-// console.log("2" > 1);
-// console.log("02" > 1);
+console.log("2" > 1);
+console.log("02" > 1);
+console.log("02" == 2);
+
+//**Note: JavaScript converts the string to a number before performing the comparison. JavaScript performs implicit type conversion when comparing a string with a number.
 
 // console.log(null > 0);
 // console.log(null == 0);
@@ -22,4 +25,4 @@
 
 // ===
 
-console.log("2" === 2);
+// console.log("2" === 2);
