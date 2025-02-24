@@ -83,5 +83,19 @@ const users = [
 // newArr3.push(newData);
 // console.log(newArr3);
 
-console.log(tinderUser1.hasOwnProperty('isloogedIn'))
-console.log(tinderUser1.hasOwnProperty('gameId'))
+// console.log(tinderUser1.hasOwnProperty('isloogedIn'))
+// console.log(tinderUser1.hasOwnProperty('gameId'))
+
+const course = {
+    coursename: "js in hindi",
+    price: "999",
+    courseInstructor: "Rahul"
+}
+
+// console.log(course.courseInstructor);
+
+// const {courseInstructor} = course;
+// console.log(courseInstructor);
+
+const {courseInstructor: instructor} = course;
+console.log(instructor);
