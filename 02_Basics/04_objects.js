@@ -99,3 +99,7 @@ const course = {
 
 const {courseInstructor: instructor} = course;
 console.log(instructor);
+
+/*
+ Note:- An object in JavaScript is a collection of key-value pairs, where the keys are strings (or Symbols) and the values can be any data type, including other objects, functions, arrays, etc.
+*/
