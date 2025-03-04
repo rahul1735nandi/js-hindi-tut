@@ -1,0 +1,129 @@
+*********************************  Javascript Execution Context *********************************
+
+
+{} -> Global Execution Context (GEC will always created)
+
+Note: GEC will be store inside "this"
+
+** Important: In browser value of "this" is window object. **
+
+1. Global Execution Context
+2. Function Execution Context
+3. Eval Execution Context
+
++++++++++++++++++++++ Execution Process +++++++++++++++++++++
+
+
+{ code } ->
+
+ - Memory Creation Phase / Creation Phase
+ - Execution Phase
+
+ Example:
+
+ let val1 = 10;
+ let val2 = 5;
+ function addNum(num1, num2) {
+    let total = num1 + num2;
+    return total;
+ }
+ let result1 = addNum(val1, val2);
+ let result2 = addNum(10, 2);
+
+ step 1 -> Global Execution (it will be allocated in "this").
+
+ step 2 -> Creation Phase
+
+  - val1 -> undefined
+  - val2 -> undefined
+  - addNum -> defination
+  - result1 -> undefined
+  - result2 -> undefined
+
+  // This is called first cycle
+
+  step 3 -> Execution Phase
+
+   - val1 = 10
+   - val2 = 5
+   - result1 = 15
+   - result2 = 12
+
+// When it comes to result1 and it is a function addNum so it will create a separate excution 
+   context and it will be created whenever the function gets called
+
+addNum -> 
+
+ => new variable environment + execution thread   // (This is called new executional context)
+
+
+ => Memory Creation Phase
+
+  - val1 -> undefined
+  - val2 -> undefined
+  - total -> undefined
+
+=> Execution Phase
+
+ - num1 -> 10
+ - num2 -> 5
+ - total -> 15  (We are returning this total, so it will return back to global executional 
+                 context)
+
+** Note: This new executional context will be deleted after this and again when the function gets called it will create a new executional context
+
+** For result2 **
+
+addNum ->
+
+=> new variable environment + execution thread
+
+=> Memory Creation Phase
+
+ - num1 = undefined
+ - num2 = undefined
+ - total = undefined
+
+=> Execution Phase
+
+ - num1 = 10
+ - num2 = 2
+ - total = 12
+
+
+ 
+ *****************************************  Call Stack ******************************************
+
+ function one() {
+    console.log("one");
+    two();
+ };
+
+ function two() {
+    console.log("two");
+    three();
+ };
+
+ function three() {
+    console.log("three");
+ };
+
+ one();
+ two();
+ three();
+
+ ________________________________________________
+ |                                              |
+ |                     three                    |
+ |______________________________________________|
+ |                                              |
+ |                     two                      |
+ |______________________________________________|
+ |                                              |
+ |                     one                      |
+ |______________________________________________|
+ |Global Execution Context / Global Environment |
+ |______________________________________________|
+
+*Note:-> LIFO (Last in firt out), here three come at the last so it will be executed first and 
+         then two will be executed and so on.
