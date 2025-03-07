@@ -1,7 +1,7 @@
 *********************************  Javascript Execution Context *********************************
 
 
-{} -> Global Execution Context (GEC will always created)
+{ code } -> Global Execution Context (GEC will always created)
 
 Note: GEC will be store inside "this"
 
