@@ -41,3 +41,14 @@ myCoding.forEach((value) => {
     // console.log(value);
     // console.log(value.ln_name);
 })
+
+
+const map = new Map();
+map.set("IN", "India");
+map.set("USA", "United States of America");
+map.set("FR", "France");
+map.set("IN", "India");
+
+map.forEach((value, key) => {
+    console.log(`${key} : ${value}`);
+})

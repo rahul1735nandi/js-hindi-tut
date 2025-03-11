@@ -17,18 +17,23 @@ for (const greet of greetings) {
 
 // Maps
 
-const map = new Map();
+// The Map object holds key-value pairs and remembers the original
+// insertion order of the keys. Any value (both objects and primitive values)
+// may be used as either a key or a value.
+
+
+const map = new Map();  
 map.set("IN", "India");
 map.set("USA", "United States of Amerca");
 map.set("FR", "France");
-map.set("IN", "India");
+map.set("IN", "India"); // It will not add "IN", "India" because it's already present
 // console.log(map);
 
 for (const key of map) { // It will print all together like // [ 'IN', 'India' ] or [ 'FR', 'France' ]
     // console.log(key);
 }
 
-for (const [key, value] of map) {  // to print the key and values seperate we can use destructure like this
+for (const [key, value] of map) {  // to print the key and values seperately by using destructure like this
     // console.log(`${key} => ${value}`);
 }
 
