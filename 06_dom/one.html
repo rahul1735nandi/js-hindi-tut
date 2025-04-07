@@ -31,3 +31,30 @@
     </div> 
 </body>
 </html>
+
+
+
+<!-- Note
+ 
+* innerText :-
+
+- Represents: The visible text content of an element (what the user sees on the screen).
+- Ignores: Hidden elements (e.g., display: none) or elements not rendered.
+- HTML tags? ❌ No. Returns plain text only.
+
+* textContent:-
+
+- Represents: All the text content of an element, including its descendants.
+- Ignores: CSS styling – includes hidden text too.
+- Triggers Reflow: ❌ No – better for performance.
+- HTML tags? ❌ No – returns plain text only.
+
+
+* innerHTML:-
+
+- Represents: The HTML content inside the element as a string.
+- Includes: All tags, text, and HTML structure.
+- HTML tags? ✅ Yes. You can read and set HTML using this.
+- Performance: Faster than innerText because it doesn’t care about styling.
+
+-->
