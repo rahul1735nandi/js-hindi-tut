@@ -77,6 +77,7 @@ function displayMessage(msg) {
 function endGame() {
     userInput.value = '';
     userInput.setAttribute('disabled', '');
+    submit.setAttribute('disabled', '');
     p.classList.add('button');
     p.innerHTML = `<h2 id="newGame">New Game</h2>`;
     startOver.appendChild(p);
@@ -86,6 +87,7 @@ function endGame() {
 
 function newGame() {
     const newGameButton = document.querySelector('#newGame');
+    newGameButton.style.cursor = 'pointer';
     newGameButton.addEventListener('click', (event) => {
         randomNum = Math.floor(Math.random() * 10) + 1;
         console.log("New random number is: ", randomNum);
@@ -94,6 +96,7 @@ function newGame() {
         guessSlot.innerHTML = '';
         remaining.innerHTML = `${11 - numOfGuess}`;
         userInput.removeAttribute('disabled');
+        submit.removeAttribute('disabled');
         startOver.removeChild(p);
         playGame = true;
     })
