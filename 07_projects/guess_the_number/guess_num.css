@@ -41,7 +41,7 @@ button {
   font-size: 20px;
   border-style: none;
   margin-top: 50px;
-  /* margin-left: 75px; */
+  cursor: pointer;
 }
 
 #guessField {
@@ -72,7 +72,7 @@ button {
   box-sizing: border-box;
   text-align: center;
   width: 450px;
-  height: 550px;
+  height: 600px;
   background-color: #474747;
   color: #fff;
   font-size: 25px;
@@ -80,6 +80,7 @@ button {
 
 h1 {
   background-color: #161616;
+  padding: 10px;
 
   color: #fff;
   text-align: center;
