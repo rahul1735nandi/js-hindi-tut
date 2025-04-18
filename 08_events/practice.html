@@ -5,19 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body onkeydown="showChar(event)">
     <!-- <p>Press any key or click the mouse to get the event type.</p>
     <p id="log"></p> -->
 
-    <p>
+    <!-- <p>
         Focus this iframe and press any key to get the current timestamp for the
         keypress event.
     </p>
-    <p>timeStamp: <span id="time">-</span></p>
+    <p>timeStamp: <span id="time">-</span></p> -->
 
     <!-- <p><a id="link1" href="www.google.com">Visit google</a></p>
     <p><a id="link2" href="www.youtube.com">Visit youtube</a>(you can't)</p>
     <p id="log"></p> -->
+
+    <!-- <div id="box1" style="height: 100px; width: 100px; background: red;"></div>
+    <div id="box2" style="height: 100px; width: 100px; background: blue; margin-top: 20px;"></div> -->
+
+    <!-- <div id="parent">
+        Click parent
+        <div id="child">Click child</div>
+    </div>
+    <button id="reset">Reset</button>
+    <pre id="output"></pre> -->
+
+    <!-- <p>Move your mouse to see it's position.</p>
+    <p id="screen-log"></p> -->
+
+    <p>
+        Press any character key, with or without holding down the ALT key.<br />
+        You can also use the SHIFT key together with the ALT key.
+    </p>
 </body>
 <script src="./practice.js"></script>
 </html>
