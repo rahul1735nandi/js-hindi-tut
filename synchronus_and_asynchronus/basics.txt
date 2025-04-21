@@ -23,3 +23,49 @@ Call Stack                          Memory Heap
  Block the flow of program               Does not block execution
           |                                       |      
      Read File Sync                        Read file async
+
+
+** How a Program Reads Files (with Kernel Context) **
+
+-> Program Request:
+The program wants to read a file. So it sends a request to the Operating System (OS) to open and read that file.
+
+-> Kernel Involvement:
+The Kernel (the core part of the OS) handles this request. User programs can’t directly access hardware or files — the kernel does that for them.
+
+-> File Access via Context:
+To do this safely, the kernel uses a process context — it knows which process (your program) is making the request and applies permissions, file handles, memory access, etc., to ensure security and proper execution.
+
+-> Reading the File:
+Once access is approved:
+
+The kernel opens the file (if it exists and permission is granted).
+
+It reads the contents (or a portion of it) into memory (buffer/cache).
+
+It returns the data to the program, typically via system calls like read().
+
+-> Execution Continues:
+The program receives the data and continues execution — maybe processing it, displaying it, etc.
+
+
+
+** Steps for Database Access: **
+
+-> Program sends a query (like SELECT * FROM users) to the DBMS using a client or library (like JDBC, psycopg2, etc.).
+
+The DBMS itself is a full-fledged program (a server) running in the background.
+
+-> The DBMS:
+
+Parses the query
+
+Checks permissions (is this user allowed to do this?)
+
+Looks up data in its own storage files
+
+Uses indexing, caching, and optimization to access data efficiently
+
+-> The DBMS may internally use file system access, so yes — the kernel is involved behind the scenes when the DBMS reads from or writes to its data files.
+
+-> The DBMS returns the result back to your program (not the kernel directly).
