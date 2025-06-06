@@ -29,5 +29,7 @@ function User(userName, loginCount, isLoggedIn) {
 
 const user1 = new User("Sanu", 10, true);
 const user2 = new User("Deba", 12, true);
-console.log(user1.constructor);
-// console.log(user2);
+// console.log(user1.constructor);
+console.log(user2);
+console.log(user2 instanceof User);
+console.log(user2 instanceof Object);
