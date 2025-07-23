@@ -1,0 +1,35 @@
+const descriptor = Object.getOwnPropertyDescriptor(Math, "PI");
+// console.log(descriptor);
+
+// console.log(Math.PI);
+// Math.PI = 5;
+// console.log(Math.PI);
+
+const myNewObj =  {
+    name: "ginger chai",
+    price: 250,
+    isAvailable: true,
+    orderChai: function() {
+        console.log("order not placed");
+    }
+};
+
+// console.log(Object.getOwnPropertyDescriptor(myNewObj, "name"));
+
+Object.defineProperty(myNewObj, "name", {
+    writable: false,
+    enumerable: false,
+    configurable: true
+});
+
+// console.log(Object.getOwnPropertyDescriptor(myNewObj, "name"));
+
+myNewObj.name = "masala chai";
+// console.log(myNewObj);
+
+for (let [key, value] of Object.entries(myNewObj)) {
+    if(typeof value !== 'function') {
+        console.log(`${key}: ${value}`);
+    }
+}
+
