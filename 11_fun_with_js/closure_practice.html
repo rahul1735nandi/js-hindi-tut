@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure Practice</title>
+</head>
+
+<body style="background-color: #313131;">
+   <div id="btn-container"></div>
+</body>
+<script>
+    let colorArr = ["red", "blue", "green", "yellow", "orange", "pink", "lightgreen"];
+
+    function clickHandler(color) {
+        return function () {
+            document.body.style.backgroundColor = `${color}`;
+        }
+    }
+
+    function createButton() {
+        const container = document.getElementById("btn-container");
+        colorArr?.forEach((color) => {
+            const btn = document.createElement('button');
+            btn.id = color;
+            btn.onclick = clickHandler(color);
+            btn.innerText = color.toUpperCase();
+            btn.style.margin = "5px";
+            container.appendChild(btn);
+        })
+    }
+
+    createButton();
+
+</script>
+
+</html>
