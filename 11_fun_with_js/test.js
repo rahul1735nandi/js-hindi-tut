@@ -4,8 +4,8 @@
 // Continous, Holey (There is two types of Array "Continous" and "Holey")
 
 // SMI (Small Integer)
-// Packed element
-// Double (float, string, function)
+// Double element (float numbers)
+// DoublePacked (number, string, object, etc.)
 
 
 const arrTwo = [1,2,3,4,5]; // PACKED_SMI_ELEMENT
