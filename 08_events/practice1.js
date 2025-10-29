@@ -28,6 +28,21 @@ function clicked() {
 const input = document.getElementById('input');
 const output = document.getElementById('output');
 
-input.addEventListener('keydown', (event) => {
-    output.textContent = input.value;
+// input.addEventListener('keydown', (event) => {
+//     output.textContent = input.value.length;
+// })
+
+// input.addEventListener('keydown', (event) => {    
+//     if(event.key === 'Enter') {
+//         output.textContent = 'Submitted!';
+//     }
+// });
+
+
+const toggle = document.getElementById('toggle');
+const password = document.getElementById('password');
+
+toggle.addEventListener('change', (event) => {
+    console.log(event);
+    password.type = toggle?.checked ? "text" : "password";
 })
