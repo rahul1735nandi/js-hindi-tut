@@ -39,10 +39,41 @@ const output = document.getElementById('output');
 // });
 
 
-const toggle = document.getElementById('toggle');
-const password = document.getElementById('password');
+// const toggle = document.getElementById('toggle');
+// const password = document.getElementById('password');
 
-toggle.addEventListener('change', (event) => {
-    console.log(event);
-    password.type = toggle?.checked ? "text" : "password";
+// toggle.addEventListener('change', (event) => {
+//     console.log(event);
+//     password.type = toggle?.checked ? "text" : "password";
+// })
+
+// const form = document.getElementById('form');
+// const result = document.getElementById('result');
+
+// form.addEventListener('submit', (event) => {
+//     event.preventDefault();
+//     result.textContent = document.getElementById('name').value;
+// });
+
+
+const colors = document.getElementById('colors');
+const selected = document.getElementById('selected');
+
+// colors.addEventListener('change', (event) => {
+//     console.log(event.target.value);
+// })
+
+// colors.addEventListener("change", () => {
+//   selected.textContent = `You selected: ${colors.value}`;
+// });
+
+
+const checkBoxes = document.querySelectorAll('.check');
+const countText = document.getElementById('count');
+
+checkBoxes.forEach((box) => {
+    box.addEventListener("change", (event) => {        
+        const count = document.querySelectorAll('.check:checked').length;
+        countText.textContent = `Checked: ${count}`;
+    })
 })
