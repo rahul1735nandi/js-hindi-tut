@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Set Time out function</title>
+</head>
+<body>
+    <h1>Chai aur code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+
+    const sayRahul = function(){
+        document.querySelector('h1').innerHTML = "Welcome Rahul";
+    };
+
+    const st = setTimeout(sayRahul, 2000);
+    console.log("st ",st);
+
+    document.getElementById('stop').addEventListener('click', ()=> {
+        clearInterval(st);
+        console.log("STOPPED");
+    });
+</script>
+</html>
